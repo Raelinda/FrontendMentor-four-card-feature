@@ -1,0 +1,176 @@
+/* fonts */
+/* poppins-200 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/poppins-v15-latin-200.woff') format('woff');
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/poppins-v15-latin-regular.woff') format('woff');
+}
+
+/* poppins-600 - latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/poppins-v15-latin-600.woff') format('woff');
+  /* Legacy iOS */
+}
+
+/* Body Basics */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  margin: 0;
+  color: var(--grayish-blue);
+  background: var(--very-light-gray);
+  font-size: 15px;
+  text-align: center;
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Typography */
+h1 {
+  color: var(--very-dark-blue);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Layout */
+.container {
+  width: min(85%, 1220px);
+  margin: 0 auto;
+}
+
+/* Intro */
+.intro {
+  margin: 4rem 0;
+
+}
+
+.intro__title--light {
+  font-weight: 200;
+}
+
+/* cards */
+.cards {
+  margin: 3rem 0 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: left;
+  max-width: 315px;
+  margin: 1.5rem auto;
+  border-radius: 3px;
+  box-shadow: 0 0 25px -8px var(--grayish-blue);
+}
+
+.cyan {
+  border-top: 4px solid var(--cyan);
+}
+
+.red {
+  border-top: 4px solid var(--red)
+}
+
+.orange {
+  border-top: 4px solid var(--orange);
+}
+
+.blue {
+  border-top: 4px solid var(--blue);
+}
+
+.card__content {
+  margin-bottom: 2rem;
+}
+
+.card__title {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+  font-size: 1.2rem;
+}
+
+.card__img {
+  width: 20%;
+  align-self: flex-end;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .intro {
+    margin: 0 auto;
+  }
+
+  .intro__title--light,
+  .intro__title--bold {
+    font-size: 2rem;
+  }
+
+  .intro__text {
+    font-size: 1rem;
+    max-width: 45%;
+    margin: 1em auto 0;
+  }
+
+  .cards {
+    display: flex;
+  }
+
+  .card {
+    align-self: center;
+  }
+
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
